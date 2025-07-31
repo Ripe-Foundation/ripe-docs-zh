@@ -16,11 +16,11 @@ description: 快速解答您关心的问题。
 
 ### 什么是 GREEN？
 
-[GREEN](../core-protocol/01-green-stablecoin-zh.md) 是 Ripe 的超额抵押稳定币，始终价值 1 美元。每 1 枚 GREEN 至少由 110% 的抵押品价值支持（通常远高于此）。您可以通过抵押存入的资产来铸造 GREEN，并通过偿还贷款来销毁 GREEN。
+[GREEN](../core-protocol/01-green-stablecoin.md) 是 Ripe 的超额抵押稳定币，始终价值 1 美元。每 1 枚 GREEN 至少由 110% 的抵押品价值支持（通常远高于此）。您可以通过抵押存入的资产来铸造 GREEN，并通过偿还贷款来销毁 GREEN。
 
 ### 我的资金安全吗？
 
-您的[存款](../core-protocol/03-collateral-assets-zh.md)仅用于支持您自己的贷款——不是共享的贷款池。如果其他人的风险仓位被清算，对您不会产生影响。该协议采用多重安全机制，包括赎回先于清算、部分清算（而非全额清算），以及旨在将损失降至最低的四阶段清算系统。
+您的[存款](../core-protocol/03-collateral-assets.md)仅用于支持您自己的贷款——不是共享的贷款池。如果其他人的风险仓位被清算，对您不会产生影响。该协议采用多重安全机制，包括赎回先于清算、部分清算（而非全额清算），以及旨在将损失降至最低的四阶段清算系统。
 
 ## 借贷基础
 
@@ -32,11 +32,11 @@ description: 快速解答您关心的问题。
 - **ETH/WBTC**：最高可借其价值的 70–80%
 - **波动资产**：最高可借其价值的 30–50%
 
-您的总[借款能力](../core-protocol/02-borrowing-zh.md)会将所有资产按各自的 LTV 加权后合并计算。
+您的总[借款能力](../core-protocol/02-borrowing.md)会将所有资产按各自的 LTV 加权后合并计算。
 
 ### 利率是如何运作的？
 
-您支付的利率是根据您的[抵押品组合](../core-protocol/03-collateral-assets-zh.md)计算出的加权平均利率。如果您的存款大部分是稳定币（低利率）并配有少量 ETH（中等利率），那么您的利率将更接近稳定币利率。利率仅在您与贷款交互时发生变化——除非您选择更新，否则现有借款人的利率不受市场波动的影响。
+您支付的利率是根据您的[抵押品组合](../core-protocol/03-collateral-assets.md)计算出的加权平均利率。如果您的存款大部分是稳定币（低利率）并配有少量 ETH（中等利率），那么您的利率将更接近稳定币利率。利率仅在您与贷款交互时发生变化——除非您选择更新，否则现有借款人的利率不受市场波动的影响。
 
 ### 什么是动态利率？
 
@@ -52,7 +52,7 @@ description: 快速解答您关心的问题。
 
 ### 我什么时候会被清算？
 
-[清算](../core-protocol/04-liquidations-zh.md)发生在您的抵押品价值低于偿还债务所需的最小值时。有三个关键阈值需要关注：
+[清算](../core-protocol/04-liquidations.md)发生在您的抵押品价值低于偿还债务所需的最小值时。有三个关键阈值需要关注：
 
 1. **最高 LTV（例如 70%）**：借款上限——不能超过此比例借款。
 2. **赎回阈值（例如 80%）**：预警—— GREEN 持有人可以赎回您的仓位。
@@ -60,7 +60,7 @@ description: 快速解答您关心的问题。
 
 **举例**：如果您有 6,000 美元的债务，清算阈值为 90%，那么您至少需要 6,667 美元的抵押品（6,000 ÷ 0.90）。如果抵押品价值低于这个数值，清算就会启动。
 
-在达到这些区域之前，请及时监控您的头寸，并通过增加抵押品或偿还债务来保持安全。有关所有风险区域的可视化指南，请参阅[阈值如何协同作用](../core-protocol/02-borrowing-zh.md#how-thresholds-work-together-a-visual-guide)。
+在达到这些区域之前，请及时监控您的头寸，并通过增加抵押品或偿还债务来保持安全。有关所有风险区域的可视化指南，请参阅[阈值如何协同作用](../core-protocol/02-borrowing.md#阈值如何协同作用可视化指南)。
 
 ### 赎回和清算有什么区别？
 
@@ -85,7 +85,7 @@ Ripe 只会清算恢复您的仓位健康所需的最小数量，而不会清算
 
 ### 什么是 sGREEN？
 
-[sGREEN](../earning-and-rewards/05-sgreen-zh.md) 是一种生息型 GREEN，能够自动捕获协议收益。您的 sGREEN 数量保持不变，但其对应的 GREEN 价值会随着时间增加，来源包括：
+[sGREEN](../earning-and-rewards/05-sgreen.md) 是一种生息型 GREEN，能够自动捕获协议收益。您的 sGREEN 数量保持不变，但其对应的 GREEN 价值会随着时间增加，来源包括：
 
 - 借款人支付的利息
 - 新贷款的发起费用
@@ -95,7 +95,7 @@ Ripe 只会清算恢复您的仓位健康所需的最小数量，而不会清算
 
 ### 稳定池如何运作？
 
-[稳定池](../earning-and-rewards/06-stability-pools-zh.md) 持有 sGREEN 和 GREEN LP 代币，这些代币以折扣价兑换被清算的抵押品。作为存款人，您可以：
+[稳定池](../earning-and-rewards/06-stability-pools.md) 持有 sGREEN 和 GREEN LP 代币，这些代币以折扣价兑换被清算的抵押品。作为存款人，您可以：
 
 - 继续赚取 sGREEN 收益
 - 以 5–15% 的折扣获得清算抵押品
@@ -106,7 +106,7 @@ Ripe 只会清算恢复您的仓位健康所需的最小数量，而不会清算
 
 ### 如何获得 RIPE 奖励？
 
-[RIPE 奖励](../earning-and-rewards/07-ripe-rewards-zh.md) 目前分配给两个群体（90% 给质押者，10% 给借款人）：
+[RIPE 奖励](../earning-and-rewards/07-ripe-rewards.md) 目前分配给两个群体（90% 给质押者，10% 给借款人）：
 
 1. **质押者（90%）**：
 
@@ -181,7 +181,7 @@ Ripe 只会清算恢复您的仓位健康所需的最小数量，而不会清算
 
 ### 什么是 RIPE？
 
-[RIPE](../governance-and-economics/09-governance-zh.md) 是协议的治理代币。将其锁定在治理金库中可以：
+[RIPE](../governance-and-economics/09-governance.md) 是协议的治理代币。将其锁定在治理金库中可以：
 
 - 积累未来治理的投票权
 - 获得来自质押者分配的奖励
@@ -201,11 +201,11 @@ RIPE 的总供应量为 10 亿枚：
 - **17.2%** 分配给早期支持者（55 万美元种子轮，价格 0.02 美元）
 - **15%** 分配给分销合作伙伴（Hightop）
 
-所有归属均在链上通过透明的合约执行。详细信息见[RIPE 代币经济学](../governance-and-economics/08-ripe-tokenomics-zh.md)。
+所有归属均在链上通过透明的合约执行。详细信息见[RIPE 代币经济学](../governance-and-economics/08-ripe-tokenomics.md)。
 
 ### 什么是 Ripe 债券？
 
-[债券](../governance-and-economics/10-bonds-zh.md) 允许您以动态价格用稳定币（如 USDC）兑换 RIPE 代币。将交换得到的 RIPE 锁定最长 3 年，可获得最多 3 倍的代币奖励。所有收益都会注入 [Endaoment](../governance-and-economics/11-endaoment-zh.md) 金库，用于支持 GREEN 并产生协议收入。
+[债券](../governance-and-economics/10-bonds.md) 允许您以动态价格用稳定币（如 USDC）兑换 RIPE 代币。将交换得到的 RIPE 锁定最长 3 年，可获得最多 3 倍的代币奖励。所有收益都会注入 [Endaoment](../governance-and-economics/11-endaoment.md) 金库，用于支持 GREEN 并产生协议收入。
 
 ### 什么是债券增强器？
 
@@ -217,7 +217,7 @@ RIPE 的总供应量为 10 亿枚：
 
 ### 什么是 Endaoment？
 
-[Endaoment](../governance-and-economics/11-endaoment-zh.md) 是 Ripe 的金库系统，结合自动化机制和策略管理。其作用包括：
+[Endaoment](../governance-and-economics/11-endaoment.md) 是 Ripe 的金库系统，结合自动化机制和策略管理。其作用包括：
 
 - 管理债券销售产生的协议自有流动性
 - 通过 Underscore Protocol 在 DeFi 中产生收益
@@ -249,11 +249,11 @@ Ripe 使用带自动回退的多预言机系统。我们按优先顺序检查 Ch
 
 1. 保守的抵押率
 2. 清算前的赎回机制
-3. [稳定池](../earning-and-rewards/06-stability-pools-zh.md) 吸收清算
+3. [稳定池](../earning-and-rewards/06-stability-pools.md) 吸收清算
 4. 守护者网络确保快速执行
-5. [Endaoment](../governance-and-economics/11-endaoment-zh.md) 金库作为最终后盾
+5. [Endaoment](../governance-and-economics/11-endaoment.md) 金库作为最终后盾
 
-若仍然发生坏账，协议可以出售[债券](../governance-and-economics/10-bonds-zh.md)筹集资金。这将铸造超出 10 亿供应上限的 RIPE 代币（例如，如果用 100 万 RIPE 覆盖坏账，则总供应量变为 10.01 亿）。额外铸造会按比例稀释所有 RIPE 持有者的权益，在确保协议保持偿付能力的同时公平分摊成本。
+若仍然发生坏账，协议可以出售[债券](../governance-and-economics/10-bonds.md)筹集资金。这将铸造超出 10 亿供应上限的 RIPE 代币（例如，如果用 100 万 RIPE 覆盖坏账，则总供应量变为 10.01 亿）。额外铸造会按比例稀释所有 RIPE 持有者的权益，在确保协议保持偿付能力的同时公平分摊成本。
 
 ### 市场崩盘时会发生什么？
 

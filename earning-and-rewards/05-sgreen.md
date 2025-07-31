@@ -6,7 +6,7 @@ description: 设置后无需理会的收益
 
 您的稳定币很懒惰。它们只是静静地躺着，什么也不做，什么也不赚。
 
-与此同时，Ripe 借款人正在为以 ETH 到 JPEG 等各种资产作为抵押的贷款支付利息。这些利息？可以是您的。只需将 [GREEN](../core-protocol/01-green-stablecoin-zh.md) 存入 sGREEN，即可开始获得协议收入的每一分钱。无需质押。无需领取。无需思考。
+与此同时，Ripe 借款人正在为以 ETH 到 JPEG 等各种资产作为抵押的贷款支付利息。这些利息？可以是您的。只需将 [GREEN](../core-protocol/01-green-stablecoin.md) 存入 sGREEN，即可开始获得协议收入的每一分钱。无需质押。无需领取。无需思考。
 
 最棒的是？即使借款人消失，您也能获得收益。欢迎体验真正有效的收益。
 
@@ -21,7 +21,7 @@ sGREEN 是 GREEN 的生息伴生代币——一个「设置后无需理会」的
 1. **借款人利息支付**：来自协议中所有活跃贷款的持续收益
 2. **发起费（Daowry）**：每笔新贷款铸造时收取 0.5% 的费用，立即增加价值
 3. **未实现收益清算**：即使借款人从未偿还贷款，其应计利息也会通过新铸造的 GREEN 定期"清算"给 sGREEN 持有人。您无需等待贷款偿还即可获得收益——无论借款人的行为如何，协议都会确保 sGREEN 的价值持续增长
-4. **未来金库收益**：[治理](../governance-and-economics/09-governance-zh.md)可以将 [Endaoment](../governance-and-economics/11-endaoment-zh.md) 的利润分配给 sGREEN 持有人
+4. **未来金库收益**：[治理](../governance-and-economics/09-governance.md)可以将 [Endaoment](../governance-and-economics/11-endaoment.md) 的利润分配给 sGREEN 持有人
 
 这不是投机收益——这是实际协议使用带来的真实收入，会自动复合到您的仓位中。
 
@@ -47,13 +47,13 @@ sGREEN 是 GREEN 的生息伴生代币——一个「设置后无需理会」的
 
 **计算方法**：以 5% 的年化利率借款，在 sGREEN 上赚取 8% = 借款资金的 3% 净利润
 
-### 选项 3：部署到[稳定池](06-stability-pools-zh.md)（最高收益）
+### 选项 3：部署到[稳定池](06-stability-pools.md)（最高收益）
 
 将 sGREEN 存入稳定池，叠加多个收入来源：
 
 - **继续赚取**：sGREEN 基本收益继续
 - **添加清算**：以 5-15% 的折扣购买抵押品
-- **额外奖励**：赚取 [RIPE 代币](07-ripe-rewards-zh.md)
+- **额外奖励**：赚取 [RIPE 代币](07-ripe-rewards.md)
 - **三重叠加**：三种来源复合在一起
 
 **潜在回报**：基础收益 + 清算利润 + RIPE 奖励 = 显著的年化利率

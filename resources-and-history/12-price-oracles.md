@@ -67,7 +67,7 @@ Chainlink  凭借其久经考验的业绩和广泛的应用，成为我们大�
 - **特殊功能**：实时监控  GREEN  的锚定
 - **信任模型**：链上自动做市商状态，具备抗操纵性
 
-**对  GREEN  稳定至关重要**：Curve  价格源维护着  “Green  参考池”  数据，该数据直接影响  [动态利率](../core-protocol/02-borrowing.md#dynamic-interest-rates-emergency-mechanism-only)。通过对  GREEN/USDC  池余额进行加权快照，协议可以检测到  GREEN  交易低于锚定价时，并自动调整借贷成本以恢复平衡。这形成了一个强大的反馈循环——当  GREEN  走弱时，更高的利率会激励借款人购买  GREEN  进行偿还，从而加强锚定。
+**对  GREEN  稳定至关重要**：Curve  价格源维护着  “Green  参考池”  数据，该数据直接影响  [动态利率](../core-protocol/02-borrowing.md#动态利率)。通过对  GREEN/USDC  池余额进行加权快照，协议可以检测到  GREEN  交易低于锚定价时，并自动调整借贷成本以恢复平衡。这形成了一个强大的反馈循环——当  GREEN  走弱时，更高的利率会激励借款人购买  GREEN  进行偿还，从而加强锚定。
 
 ### 3. Pyth  网络（高频）
 
