@@ -1,6 +1,6 @@
 # 目录
 
-* [RIPE Protocol](README.md)
+* [Ripe Protocol](README.md)
 
 ## 核心协议
 
