@@ -27,3 +27,9 @@
 * [价格预言机：准确的资产估值](resources-and-history/12-price-oracles.md)
 * [协议档案：从构想到上线的历程](resources-and-history/13-archives.md)
 * [常见问题解答](resources-and-history/faq.md)
+
+## 开发者
+
+* [技术文档](https://ripe-finance.gitbook.io/ripe-developers)
+* [已部署合约](https://ripe-finance.gitbook.io/ripe-developers/deployed-contracts)
+* [GitHub](https://github.com/Ripe-Foundation/ripe-protocol)
