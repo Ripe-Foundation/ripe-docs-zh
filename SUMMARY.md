@@ -31,5 +31,5 @@
 ## 开发者
 
 * [技术文档](https://ripe-finance.gitbook.io/ripe-developers)
-* [已部署合约](https://ripe-finance.gitbook.io/ripe-developers/deployed-contracts)
+* [已部署合约](https://ripe-finance.gitbook.io/ripe-developers/deployments)
 * [GitHub](https://github.com/Ripe-Foundation/ripe-protocol)
