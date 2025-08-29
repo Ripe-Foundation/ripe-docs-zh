@@ -22,7 +22,7 @@ description: 早期支持者获益
 
 ### 社区激励（25% - 2.5亿 RIPE）
 
-[区块奖励](../earning-and-rewards/07-ripe-rewards.md)、债券折扣和 LP 奖励直接激励协议的使用和增长。这是唯一在 TGE 当天开始分配的类别。
+[区块奖励](../earning-and-rewards/07-ripe-rewards.md)和债券共享这 2.5 亿 RIPE，以及 LP 奖励，直接激励协议的使用和增长。这是唯一在 TGE 当天开始分配的类别。
 
 ### Ripe 基金会金库（22.2% - 2.22亿 RIPE）
 
@@ -42,7 +42,7 @@ description: 早期支持者获益
 
 ## 释放计划：可持续代币释放
 
-![RIPE Emission Schedule](https://miro.medium.com/v2/format:webp/1*_cx_OWu-kZAygnVZeLI5Cw.png)
+![RIPE Emission Schedule](https://miro.medium.com/v2/format:webp/1*HQcm7_N9ZD6hbEn3-OUp9Q.png)
 
 ### 固定供应上限及应急条款
 
@@ -55,7 +55,7 @@ RIPE 的供应量严格限制在 10 亿枚，只有一个经过精心设计的�
 **社区激励（立即解锁）**
 
 - **首次解锁**：在 TGE 时立即解锁
-- **释放期限**：5 年以上
+- **释放期限**：10 年以上
 - **分配模式**：通过区块奖励、债券折扣和治理动态分配
 
 **核心贡献者（首年锁定）**
