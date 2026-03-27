@@ -100,7 +100,7 @@ _Ripe  经济模式背后的基本理念_
 
 ### Hightop 暂停期
 
-_这是我们暂停 Hightop、转而完全专注于 Ripe Protocol 基础设施时期的历史背景_
+_暂停 Hightop、专注 Ripe Protocol 基础设施建设时期的历史背景_
 
 * [Hightop Sunset、Ripe Sunrise](https://medium.com/hightop/hightop-sunset-ripe-sunrise-b2559ff9a7e4) –  我们暂停消费者应用以构建基础设施的原因
 * [我们加倍投入  DeFi](https://medium.com/hightop/were-doubling-down-on-defi-ce93fa457328) –  我们对去中心化未来发展的坚定信念
