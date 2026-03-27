@@ -234,6 +234,36 @@ Ripe 将 GREEN/USDC 流动性池作为健康指标进行监控。在正常情况
 - 您将恢复仅支付 5% 的基准利率
 ```
 
+### Underscore Earn Vault 集成
+
+[Underscore Protocol 的](https://underscore.finance/) Earn Vaults 与 Ripe 有两种关系。核心 Vault 份额可以作为 Ripe 的抵押品，而 Amplified Vaults 在 Vault 策略内部使用 Ripe 时则可获得特殊借款条件：
+
+* **50% 折扣**借款利率（可配置参数）
+* **无发起费用**（Daowry 免除）
+
+**它如何运作：**
+
+Underscore Earn Vaults 是自动化收益策略。核心 Vaults 构成基础的 AI 管理收益层，并且可以作为 Ripe 的抵押品。Amplified Vaults 则更进一步，在策略内部从 Ripe 借入 GREEN，以增加第二层收益：
+
+```
+标准借款利率：6% APR
+Underscore Vault 利率：3% APR（50% 折扣）
+发起费用：0%（Underscore 免除）
+```
+
+**对用户来说：**
+
+你并不是因为直接与 Ripe 交互而获得这项折扣。实际流程是：
+
+1. 把资金存入一个 Underscore Earn Vault
+2. 核心 Vaults 运行 AI 管理的收益策略，而 Amplified Vaults 在策略内部增加 Ripe 借款
+3. 当策略使用 Ripe 借款时，享受折扣利率的是 Vault，而不是你本人
+4. 你获得的是策略回报改善带来的收益
+
+**为什么提供这些优惠条件？**
+
+Underscore 与 Ripe 是紧密协同的协议。Underscore Vaults 产生的所有业绩费都会用于回购 RIPE 代币，直接让 RIPE 持有者受益。作为交换，Underscore Vaults 获得折扣借款条件，形成一个对两个生态都有利的共生关系。
+
 ## 借款限额与安全机制
 
 ### 多层次限额系统
