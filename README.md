@@ -209,7 +209,7 @@ Ripe："为什么不能两全其美？"
 
 ### 连接与学习
 
-- **Discord**： [加入我们的社区](https://discord.gg/Y6PWmndNaC) — 获取帮助、分享策略并连接其他用户
+- **Discord**： [加入我们的社区](https://discord.gg/hightop) — 获取帮助、分享策略并连接其他用户
 - **Twitter/X**： [@RipeProtocol](https://x.com/ripe_dao) — 最新更新与公告
 - **博客**： [Medium](https://medium.com/ripe-finance) — 深度解析与协议洞察
 - **GitHub**： [ripe-foundation](https://github.com/Ripe-Foundation/ripe-protocol) — 开源代码和开发

@@ -270,7 +270,7 @@ Ripe 使用带自动回退的多预言机系统。我们按优先顺序检查 Ch
 ### 在哪里可以了解更多？
 
 - [**文档**](../)：详尽的指导，请参阅我们的文档
-- [**Discord**](https://discord.gg/Y6PWmndNaC)：活跃的社区与团队支持
+- [**Discord**](https://discord.gg/hightop)：活跃的社区与团队支持
 - [**Twitter**](https://x.com/ripe_dao)：协议更新与公告
 - [**GitHub**](https://github.com/Ripe-Foundation/ripe-protocol)：开源代码与开发
 - [**主页**](https://www.ripe.finance/)：Ripe 主页
