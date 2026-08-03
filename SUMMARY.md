@@ -27,6 +27,7 @@
 * [价格预言机：准确的资产估值](resources-and-history/12-price-oracles.md)
 * [协议档案：从构想到上线的历程](resources-and-history/13-archives.md)
 * [常见问题解答](resources-and-history/faq.md)
+* [安全审计](resources-and-history/audits.md)
 
 ## 开发者
 
