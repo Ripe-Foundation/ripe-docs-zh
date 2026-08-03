@@ -11,7 +11,6 @@ description: Ripe Protocol 的独立安全审计报告。
 [阅读 ChainSecurity 报告](https://www.hightop.com/docs/resources/audits/ChainSecurity-Ripe.pdf)
 
 - **审查版本：** 2024 年 1 月 10 日至 2025 年 1 月 17 日收到的九个早期 Ripe Finance 智能合约架构版本
-- **最终审查版本：** `98a2099d6a732e9fd7cd52e03ff25de9cfdbaacc`
 - **范围：** `contracts/` 下的智能合约；不包括 mock、config 文件和经济模型。
 
 ## Anatomist
