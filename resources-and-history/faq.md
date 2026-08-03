@@ -237,7 +237,7 @@ RIPE 的总供应量为 10 亿枚：
 
 ### Ripe 是否经过审计？
 
-ChainSecurity 去年审计了代码，但来自 Underscore 的经验以及在 Hightop 中的实际运行经验促使我们重构。我们移除了链上治理、Juice Score、NFT、GREEN 债券和复杂的 DeFi 适配器。今天发布的精简版 v1 还未重新审计——请在决定仓位大小时牢记这一点。
+Ripe Protocol 已接受 ChainSecurity 和 Anatomist 的独立安全审查。每项审查仅涵盖报告中注明的特定代码版本和范围；后续更改可能不在涵盖范围内。有关公开报告及其范围的详细信息，请参阅[安全审计](audits.md)。
 
 ### Ripe 如何准确定价资产？
 

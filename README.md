@@ -141,6 +141,14 @@ USDC 就在那里。DAI 毫无作用。GREEN？它正在发挥作用。
 - **自动回退机制** — 无单点故障
 - **过时保护** — 始终显示最新价格
 
+#### 🛡️ [安全审计：已发布的安全评估](resources-and-history/audits.md)
+
+ChainSecurity 和 Anatomist 对 Ripe Protocol 进行的独立安全审查。
+
+- **独立审查** — ChainSecurity 和 Anatomist
+- **完整报告** — 两份报告均全文公开
+- **日期与范围** — 经过审查的代码版本及范围限制
+
 #### 📚 [协议档案：从构想到上线的历程](resources-and-history/13-archives.md)
 
 探索 Ripe 从最初的概念到经过多年完善最终推出协议的发展历程。
