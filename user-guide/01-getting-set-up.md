@@ -16,7 +16,7 @@ description: 钱包、Gas 和股票代币——首次存入前需要准备什么
 
 **第 3 步。** 获取您想存入的股票代币。请遵守两条规则：
 
-* **核对合约地址。** 将地址与发行方的官方代币注册表进行核对（例如，Robinhood 在 [docs.robinhood.com/chain/contracts](https://docs.robinhood.com/chain/contracts/) 公布其股票代币注册表），并确认同一代币出现在 Ripe 应用的 Borrow 表格中。名称和符号相同的仿冒代币确实存在。如果地址来自其他地方，请勿使用。
+* **核对合约地址。** 将地址与发行方的官方代币注册表进行核对（例如，Robinhood 在 [docs.robinhood.com/chain/contracts](https://docs.robinhood.com/chain/contracts/) 公布其股票代币注册表），并确认同一代币出现在 Ripe 应用的 Borrow 表格中。确实存在同名同符号的相似代币。如果地址来自其他地方，请勿使用。
 * **查看发行方条款。** Ripe 不是发行方；发行方自行规定谁可以持有其代币。[Ripe 上的股票代币](../core-protocol/00-stock-tokens.md)说明股票代币在 Ripe 内如何运作，以及应去哪里阅读发行方的产品条款。
 
 如果钱包里已经有股票代币，您就可以开始了。别忘了仍然需要 Gas。

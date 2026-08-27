@@ -6,7 +6,7 @@ description: 更努力工作的稳定币。
 
 您的 USDC 只是躺在那里。DAI 每增加一种资产就需要新金库，LUSD 只接受 ETH。
 
-GREEN 从一开始就不一样。用整个投资组合——股票代币、ETH、稳定币、收益仓位——共同支持一笔贷款。以 [sGREEN](../earning-and-rewards/01-sgreen.md) 持有，就能赚取协议收入；放入[稳定池](../earning-and-rewards/02-stability-pools.md)，就会以低于市场价格买入被清算抵押品。还有六项机制把它拉回 1 美元。
+GREEN 的设计与众不同。用整个投资组合——股票代币、ETH、稳定币、收益仓位——共同支持一笔贷款。以 [sGREEN](../earning-and-rewards/01-sgreen.md) 持有，就能赚取协议收入；放入[稳定池](../earning-and-rewards/02-stability-pools.md)，就会以低于市场价格买入被清算抵押品。还有六项机制把它拉回 1 美元。
 
 这就是不再问“如何再造一种稳定币”，而是开始问“稳定币究竟应该如何运作”之后得到的答案。
 
@@ -274,7 +274,7 @@ GREEN 市价为 1.03 美元？
 
 ## GREEN 与竞品：明显胜出
 
-**对比中心化稳定币（USDC/USDT）：** 您不能借出它们——只能买入。GREEN 以您已有资产为基础铸造，sGREEN 则在 USDC 闲置时继续赚取收益。
+**对比中心化稳定币（USDC/USDT）：** 您不能借入它们——只能买入。GREEN 以您已有资产为基础铸造，sGREEN 则在 USDC 闲置时继续赚取收益。
 
 **对比传统加密稳定币（DAI/LUSD）：** DAI 为每类抵押品分别建立金库，LUSD 只接受 ETH。GREEN 用整个投资组合共同支持一笔贷款。
 
