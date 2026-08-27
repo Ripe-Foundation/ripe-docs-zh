@@ -78,7 +78,7 @@ Endaoment 让每一美元都发挥作用。[债券](../governance-and-economics/
 
 没有滑点，也没有 DEX 的复杂过程：PSM 在 GREEN 与其储备稳定币（部署时固定为一种稳定币）之间按 1 美元直接兑换，具体方向取决于治理启用了哪一侧。
 
-* **铸造 GREEN：** 存入储备稳定币，按 1:1 获得 GREEN（如果选择 sGREEN，超过 1 GREEN 的部分会自动为您包装）。
+* **铸造 GREEN：** 存入储备稳定币，按 1:1 获得 GREEN（如果选择 sGREEN，只要铸造金额超过 1 GREEN，全部金额都会自动包装成 sGREEN）。
 * **赎回 GREEN：** 销毁 GREEN 或 sGREEN，按 1:1 获得储备稳定币。
 
 ```
