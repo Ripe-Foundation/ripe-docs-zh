@@ -47,7 +47,7 @@ _为什么我们要构建 Ripe Protocol——创始人的视角_
 _向世界介绍 Ripe 的完整概览_
 
 * [简介](https://www.ripe.finance/opportunity#intro) – Ripe Protocol 的整体介绍及其重要性
-* [问题](https://www.ripe.finance/opportunity#problem) – 传统 DeFi 的低效率：贷款碎片化、风险共担和抵押品有限
+* [问题](https://www.ripe.finance/opportunity#problem) – 传统 DeFi 的低效率：贷款碎片化、风险池化和抵押品有限
 * [解决方案](https://www.ripe.finance/opportunity#solution) – 统一的多抵押品借贷，带来无可比拟的资本效率
 * [协议状态](https://www.ripe.finance/opportunity#protocol) – Ripe 当时的开发进展
 * [团队](https://www.ripe.finance/opportunity#team) – Ripe 建设者的背景
