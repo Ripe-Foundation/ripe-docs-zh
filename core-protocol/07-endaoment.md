@@ -123,7 +123,7 @@ Endaoment 通过 [Underscore Protocol](https://underscore.finance/) 接入 DeFi�
 * **sGREEN 收益：** 流向 [sGREEN](../earning-and-rewards/01-sgreen.md) 持有人。
 * **治理分配：** 以 GREEN 转给治理，用于回购 RIPE。
 
-分配比例由治理设置，默认 100% 发送给 sGREEN。协议本身只负责转移 GREEN；任何 RIPE 回购都是治理另行执行的操作。详见 [RIPE 价值累积](../governance-and-economics/01-ripe-tokenomics.md#ripe-价值累积)。
+分配比例由治理设置，默认 100% 发送给 sGREEN。协议本身只负责转移 GREEN；任何 RIPE 回购都是治理另行执行的操作。详见 [RIPE 价值累积](../governance-and-economics/01-ripe-tokenomics.md#ripe-jia-zhi-lei-ji)。
 
 ### 金库收益
 

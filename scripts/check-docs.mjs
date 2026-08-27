@@ -14,6 +14,41 @@ const ASSET_DIR = '.gitbook/assets'
 const SUMMARY = 'SUMMARY.md'
 
 const EXTERNAL = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i
+const HAS_HAN = /\p{Script=Han}/u
+
+// GitBook transliterates Chinese headings instead of preserving their source
+// characters in rendered IDs. The behavior is not documented as a stable
+// algorithm and includes non-obvious results (for example, 动态利率 ->
+// `dong-tai-li-l`). Keep the verified mappings narrow: only headings that the
+// docs link to belong here. A new linked Chinese heading must be checked in the
+// GitBook revision preview and added explicitly, so the validator cannot bless
+// a source-style fragment that fails in production.
+const GITBOOK_CJK_ANCHORS = new Map([
+  ['交易时段与周末跳空', 'jiao-yi-shi-duan-yu-zhou-mo-tiao-kong'],
+  ['价格缺失时会发生什么', 'jia-ge-que-shi-shi-hui-fa-sheng-shen-me'],
+  ['哪些事件可以移动您的代币', 'na-xie-shi-jian-ke-yi-yi-dong-nin-de-dai-bi'],
+  ['6. 锚定稳定模块（PSM）', 'id-6.-mao-ding-wen-ding-mo-kuai-psm'],
+  ['Underscore Earn 金库集成', 'underscore-earn-jin-ku-ji-cheng'],
+  ['三项阈值如何协同：直观指南', 'san-xiang-yu-zhi-ru-he-xie-tong-zhi-guan-zhi-nan'],
+  ['加权债务条款详解', 'jia-quan-zhai-wu-tiao-kuan-xiang-jie'],
+  ['动态利率', 'dong-tai-li-l'],
+  ['了解风险区', 'liao-jie-feng-xian-qu'],
+  ['如果出现坏账怎么办', 'ru-guo-chu-xian-huai-zhang-zen-me-ban'],
+  ['守护者网络', 'shou-hu-zhe-wang-luo'],
+  ['清算为何重要', 'qing-suan-wei-he-zhong-yao'],
+  ['清算经济机制', 'qing-suan-jing-ji-ji-zhi'],
+  ['第一阶段：稳定池兑换', 'di-yi-jie-duan-wen-ding-chi-dui-huan'],
+  ['第二阶段：荷兰式拍卖', 'di-er-jie-duan-he-lan-shi-pai-mai'],
+  ['赎回缓冲区', 'shu-hui-huan-chong-qu'],
+  ['使用指定资产自行去杠杆', 'shi-yong-zhi-ding-zi-chan-zi-xing-qu-gang-gan'],
+  ['无法为账户估值时', 'wu-fa-wei-zhang-hu-gu-zhi-shi'],
+  ['RIPE 价值累积', 'ripe-jia-zhi-lei-ji'],
+  ['供应上限：全协议共计 10 亿', 'gong-ying-shang-xian-quan-xie-yi-gong-ji-10-yi'],
+  ['提前退出：最后手段', 'ti-qian-tui-chu-zui-hou-shou-duan'],
+  ['管理您的仓位', 'guan-li-nin-de-cang-wei'],
+  ['债券与坏账', 'zhai-quan-yu-huai-zhang'],
+  ['领取奖励时如何应用锁定', 'ling-qu-jiang-li-shi-ru-he-ying-yong-suo-ding'],
+])
 
 // --- markdown helpers -------------------------------------------------------
 
@@ -39,11 +74,16 @@ function stripFences(text) {
  * `pay-back-withdraw` when the run is collapsed. Rather than bet on one, we accept
  * both — that still catches a genuine typo without inventing a false failure.
  */
-export function slugVariants(heading) {
-  const cleaned = heading
+function plainHeading(heading) {
+  return heading
     .replace(/`([^`]*)`/g, '$1')
     .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/[*_~]/g, '')
+    .trim()
+}
+
+export function slugVariants(heading) {
+  const cleaned = plainHeading(heading)
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s-]/gu, '')
     .trim()
@@ -52,6 +92,14 @@ export function slugVariants(heading) {
 
 /** The canonical (whitespace-collapsed) slug for a heading. */
 export const slugify = (heading) => slugVariants(heading)[0]
+
+/** The IDs GitBook actually renders for a heading. */
+export function gitbookSlugVariants(heading) {
+  const text = plainHeading(heading)
+  if (!HAS_HAN.test(text)) return slugVariants(heading)
+  const mapped = GITBOOK_CJK_ANCHORS.get(text)
+  return mapped ? [mapped] : []
+}
 
 /** Links and images: [text](target) / ![alt](target), ignoring optional titles. */
 const LINK_RE = /(!?)\[([^\]]*)\]\(\s*<?([^)>\s]*)>?(?:\s+["'][^"']*["'])?\s*\)/g
@@ -65,9 +113,10 @@ function parseMarkdown(text) {
   lines.forEach((line, i) => {
     const h = line.match(/^(#{1,6})\s+(.+?)\s*$/)
     if (h) {
-      const variants = slugVariants(h[2])
-      const n = seenSlugs.get(variants[0]) ?? 0
-      seenSlugs.set(variants[0], n + 1)
+      const variants = gitbookSlugVariants(h[2])
+      const key = variants[0] ?? `unmapped:${plainHeading(h[2])}`
+      const n = seenSlugs.get(key) ?? 0
+      seenSlugs.set(key, n + 1)
       const slugs = n ? variants.map((v) => `${v}-${n}`) : variants
       headings.push({ level: h[1].length, text: h[2], slugs, line: i + 1 })
     }
@@ -82,6 +131,10 @@ function parseMarkdown(text) {
 function splitHash(raw) {
   const i = raw.indexOf('#')
   return i === -1 ? [raw, ''] : [raw.slice(0, i), raw.slice(i + 1)]
+}
+
+function decodedHash(hash) {
+  try { return decodeURIComponent(hash) } catch { return hash }
 }
 
 // --- fs helpers -------------------------------------------------------------
@@ -179,8 +232,10 @@ export function checkDocs(root) {
 
       // 6. Same-page anchors resolve.
       if (!link.target) {
-        if (link.hash && !doc.headings.some((h) => h.slugs.includes(link.hash))) {
-          add(file, link.line, 'broken-anchor', `no heading on this page matches #${link.hash}`)
+        if (link.hash && HAS_HAN.test(decodedHash(link.hash))) {
+          add(file, link.line, 'unrendered-anchor', `GitBook transliterates Chinese fragments; use its rendered ID instead of #${link.hash}`)
+        } else if (link.hash && !doc.headings.some((h) => h.slugs.includes(link.hash))) {
+          add(file, link.line, 'broken-anchor', `no rendered heading on this page matches #${link.hash}`)
         }
         continue
       }
@@ -200,8 +255,10 @@ export function checkDocs(root) {
       // 8. Cross-page anchors resolve.
       if (link.hash && rel.endsWith('.md')) {
         const target = parsed.get(rel)
-        if (target && !target.headings.some((h) => h.slugs.includes(link.hash))) {
-          add(file, link.line, 'broken-anchor', `${rel} has no heading matching #${link.hash}`)
+        if (HAS_HAN.test(decodedHash(link.hash))) {
+          add(file, link.line, 'unrendered-anchor', `GitBook transliterates Chinese fragments; use its rendered ID instead of #${link.hash}`)
+        } else if (target && !target.headings.some((h) => h.slugs.includes(link.hash))) {
+          add(file, link.line, 'broken-anchor', `${rel} has no rendered heading matching #${link.hash}`)
         }
       }
     }

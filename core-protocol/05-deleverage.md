@@ -87,7 +87,7 @@ description: 用自己的资产偿还债务，不收取费用。
 
 ## 使用 [Underscore](https://underscore.finance/) 金库？
 
-Underscore 金库自行管理其 Ripe 仓位，包括去杠杆。它如何借款、执行去杠杆，以及在您提取时如何调整，都取决于具体金库。详见 [Underscore Earn 金库集成](02-borrowing.md#underscore-earn-金库集成)。
+Underscore 金库自行管理其 Ripe 仓位，包括去杠杆。它如何借款、执行去杠杆，以及在您提取时如何调整，都取决于具体金库。详见 [Underscore Earn 金库集成](02-borrowing.md#underscore-earn-jin-ku-ji-cheng)。
 
 ## 去杠杆委托
 

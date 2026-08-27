@@ -10,7 +10,7 @@ import { tmpdir } from 'node:os'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { checkDocs, slugify, slugVariants } from './check-docs.mjs'
+import { checkDocs, gitbookSlugVariants, slugify, slugVariants } from './check-docs.mjs'
 
 const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -137,6 +137,7 @@ describe('checkDocs', () => {
 
   describe('anchors', () => {
     const target = page('Two', '## Deposit Collateral\n\nText.')
+    const chineseTarget = page('Two', '## 交易时段与周末跳空\n\nText.')
 
     test('accepts a cross-page anchor that exists', () => {
       assert.deepEqual(check(withClean({
@@ -144,6 +145,23 @@ describe('checkDocs', () => {
         'guides/01-one.md': onePage('[Go](02-two.md#deposit-collateral)'),
         'guides/02-two.md': target,
       })), [])
+    })
+
+    test('accepts the rendered GitBook ID for a Chinese heading', () => {
+      assert.deepEqual(check(withClean({
+        'SUMMARY.md': CLEAN['SUMMARY.md'] + '* [Two](guides/02-two.md)\n',
+        'guides/01-one.md': onePage('[Go](02-two.md#jiao-yi-shi-duan-yu-zhou-mo-tiao-kong)'),
+        'guides/02-two.md': chineseTarget,
+      })), [])
+    })
+
+    test('rejects a source-style Chinese fragment that GitBook will transliterate', () => {
+      const issues = check(withClean({
+        'SUMMARY.md': CLEAN['SUMMARY.md'] + '* [Two](guides/02-two.md)\n',
+        'guides/01-one.md': onePage('[Go](02-two.md#交易时段与周末跳空)'),
+        'guides/02-two.md': chineseTarget,
+      }))
+      assert.deepEqual(codes(issues), ['unrendered-anchor'])
     })
 
     test('flags a cross-page anchor that does not', () => {
@@ -258,5 +276,14 @@ describe('slugify', () => {
       'guides/01-one.md': onePage('## Steps\n\n## Steps\n\n[a](#steps) [b](#steps-1)'),
     }))
     assert.deepEqual(issues, [])
+  })
+
+  test('uses verified GitBook IDs for linked Chinese headings', () => {
+    assert.deepEqual(gitbookSlugVariants('动态利率'), ['dong-tai-li-l'])
+    assert.deepEqual(gitbookSlugVariants('6. 锚定稳定模块（PSM）'), ['id-6.-mao-ding-wen-ding-mo-kuai-psm'])
+  })
+
+  test('does not guess an unverified Chinese heading ID', () => {
+    assert.deepEqual(gitbookSlugVariants('尚未验证的标题'), [])
   })
 })

@@ -238,7 +238,7 @@ RIPE 总释放量（示例中为每天 500 RIPE）
 3. 开启 **Stake All** 会将全部领取金额存入[治理金库](../governance-and-economics/02-governance.md)（直接调用合约时，这也是默认行为）。
 4. 关闭 Stake All，您会收到流动部分，其余部分按自动质押比例处理——示例中为 75% 质押、25% 进入钱包。
 
-自动质押的 RIPE 会采用奖励锁定期限：即金库锁定期限范围的一个比例，示例中为 33% × 3 年 ≈ 1 年。它会与现有治理仓位混合，可能改变您的解锁日期——详见[管理仓位](../governance-and-economics/02-governance.md#管理您的仓位)。
+自动质押的 RIPE 会采用奖励锁定期限：即金库锁定期限范围的一个比例，示例中为 33% × 3 年 ≈ 1 年。它会与现有治理仓位混合，可能改变您的解锁日期——详见[管理仓位](../governance-and-economics/02-governance.md#guan-li-nin-de-cang-wei)。
 
 **领取示例：** 应得 1,000 RIPE。开启 Stake All：1,000 RIPE 全部锁入治理金库。关闭 Stake All：750 RIPE 锁定，250 RIPE 进入钱包。
 

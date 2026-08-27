@@ -46,7 +46,7 @@ Reserve Engine 是直接从协议购买 RIPE 的第二种方式。预先付款�
 * **纪元容量**限制一个纪元最多接受多少支付代币。
 * **配额预算**限制所有 Reserve Engine 仓位总共可以预留多少 RIPE。每笔购买的完整配额都必须能放入预算；领取不会补回预算。
 
-两者都不是托管的 RIPE，而是记账限制。通过它们铸造的所有 RIPE 都计入协议范围内的[10 亿供应上限](01-ripe-tokenomics.md#供应上限全协议共计-10-亿)。
+两者都不是托管的 RIPE，而是记账限制。通过它们铸造的所有 RIPE 都计入协议范围内的[10 亿供应上限](01-ripe-tokenomics.md#gong-ying-shang-xian-quan-xie-yi-gong-ji-10-yi)。
 
 ## 归属：追赶式悬崖期
 

@@ -37,7 +37,7 @@ GREEN 稳定币池的流动性提供者会将 LP 代币存入[稳定池](../earn
 
 ![Earn 页面](../.gitbook/assets/user-guide-03-earn-page.png)
 
-**第 5 步。** 奖励会自动累积并显示在 Dashboard（仪表板）上。奖励以 RIPE 支付，因此领取时会打开[下一篇指南介绍的领取对话框](06-get-and-lock-ripe.md#领取奖励时如何应用锁定)，其中会把您领取的一部分 RIPE 质押并锁定。首次领取前，请先阅读该部分。
+**第 5 步。** 奖励会自动累积并显示在 Dashboard（仪表板）上。奖励以 RIPE 支付，因此领取时会打开[下一篇指南介绍的领取对话框](06-get-and-lock-ripe.md#ling-qu-jiang-li-shi-ru-he-ying-yong-suo-ding)，其中会把您领取的一部分 RIPE 质押并锁定。首次领取前，请先阅读该部分。
 
 关于页面上显示的收益率：这些都是估算值。新资金池因为存款规模仍小，往往会显示很高的收益率；随着资金池增长，收益率会下降。
 
